@@ -26,6 +26,7 @@ Route::get('/auth', function () {
 })->middleware(['auth']);
 
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('index')
