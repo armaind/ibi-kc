@@ -10,8 +10,8 @@ class Users extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'nisn', 'name', 'password', 'username', 'email',
-        'address', 'phone_number', 'class', 'roles'
+        'name', 'username', 'email', 'password', 'telp_rumah', 'alamatrumah',
+        'provinsir', 'kotar', 'kecamatanr', 'kodeposr', 'telp_praktik', 'alamatpraktik', 'provinsip', 'kotap', 'kecamatanp', 'kodeposp', 'jampraktik', 'haripraktik', 'tenagakesehatanlain', 'tenaganonkesehatan', 'bangunan', 'ruangtunggu', 'ruangperiksa', 'ruangbersalin', 'ruangnifas', 'wc', 'ruanglain'
     ];
 
     public function setPasswordAttribute($password)

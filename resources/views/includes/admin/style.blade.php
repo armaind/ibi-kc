@@ -10,3 +10,8 @@
 <link rel="stylesheet" href="{{ url('stisla/assets/css/components.css')}}">
 {{-- Lottie JS --}}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- App css-->
+{{-- <link rel="stylesheet" type="text/css" href="{{url("main-assets/styles/style.css")}}"> --}}
+<!-- Responsive css-->
+<link rel="stylesheet" type="text/css" href="{{url("main-assets/styles/responsive.css")}}">

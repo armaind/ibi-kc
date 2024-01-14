@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>SPPIE &mdash; Login </title>
+    <title>Login &mdash; AIBIC</title>
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,21 +13,25 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ url('stisla/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('stisla/assets/css/components.css') }}">
+    <link rel="shortcut icon" href="{{ url('main-assets/images/ibi-logo.png')}}" type="image/x-icon" />
 </head>
 
 <body>
     <div id="app">
         <section class="section">
-            <div class="d-flex flex-wrap align-items-stretch">
-                <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
-                    <div class="p-4 m-3">
-                        <img src="{{ url('stisla/assets/img/stisla-fill.svg')}}" alt="logo" width="80"
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+                    {{-- <div class="p-4 m-3"> --}}
+                        <div class="login-brand">
+                        <img src="{{ url('main-assets/images/ibi-logo.png')}}" alt="logo" width="80"
                             class="shadow-light rounded-circle mb-5 mt-2">
-                        <h4 class="text-dark font-weight-normal">Selamat datang di <span
-                                class="font-weight-bold">Sppie</span>
+                        </div>
+                        <h4 class="text-center text-dark font-weight-normal">Selamat datang di <span
+                                class="font-weight-bold">AIBIC</span>
                         </h4>
-                        <p class="text-muted">Sebelum Anda memulai, anda harus masuk dengan username dan password yang
-                            telah disediakan.</p>
+                        <p class="text-center text-muted">Sebelum Anda memulai, anda harus masuk dengan username dan password yang
+                            telah didaftarkan.</p>
                         <!-- Session Status -->
                         <x-auth-session-status class="mb-4" :status="session('status')" />
                         <!-- Validation Errors -->
@@ -45,6 +49,11 @@
                             <div class="form-group">
                                 <div class="d-block">
                                     <label for="password" class="control-label">Password</label>
+                                    <div class="float-right">
+                                        <a href="forgot-password" class="text-small">
+                                          Forgot Password?
+                                        </a>
+                                      </div>
                                 </div>
                                 <input id="password" type="password" class="form-control" name="password" tabindex="2"
                                     autocomplete="current-password" required>
@@ -68,19 +77,12 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
-                    data-background="{{ url('images/login-bg.jpg')}}">
-                    <div class="absolute-bottom-left index-2">
-                        <div class="text-light p-5 pb-2">
-                            <div class="mb-5 pb-3">
-                                <h1 class="mb-2 display-4 font-weight-bold">Selamat datang!</h1>
-                                <h5 class="font-weight-normal text-muted-transparent">Silahkan login untuk masuk ke
-                                    halaman dashboard.</h5>
-                            </div>
-                            Sppie is made with <span class="text-danger">♥</span> by Syauqi
-                        </div>
-                    </div>
+                <div class="mt-5 text-muted text-center">
+                    Belum punya akun? <a href="/register">Daftar</a>
                 </div>
+                <div class="simple-footer">
+                    Copyright &copy; AIBIC 2023
+                  </div>
             </div>
         </section>
     </div>

@@ -45,7 +45,7 @@ class StaffController extends Controller
 
         Users::create($data);
 
-        return redirect()->route('data-petugas.index');
+        return redirect()->route('data-staff.index');
     }
 
     /**
@@ -56,7 +56,8 @@ class StaffController extends Controller
      */
     public function show($id)
     {
-        $item = Users::all()->findOrFail($id);
+        // $item = Users::all()->findOrFail($id);
+        $item = Users::findOrFail($id);
 
         return view('pages.admin.staff.detail', [
             'item' => $item
@@ -91,7 +92,7 @@ class StaffController extends Controller
         $item = Users::findOrFail($id);
         $item->update($data);
 
-        return redirect()->route('data-petugas.index');
+        return redirect()->route('data-staff.index');
     }
 
     /**
@@ -104,6 +105,6 @@ class StaffController extends Controller
     {
         $item = Users::findOrFail($id);
         $item->delete();
-        return redirect()->route('data-petugas.index');
+        return redirect()->route('data-staff.index');
     }
 }

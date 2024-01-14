@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top p-2 p-md-4">
     <div class="container">
         <a class="navbar-brand" href="{{url('/')}}">
-            <img src="{{ url('stisla/assets/img/stisla-fill.svg')}}" width="40" height="40"
+            <img src="{{ url('main-assets/images/ibi-logo.png')}}" width="40" height="40"
                 class="d-inline-block align-top" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
@@ -21,10 +21,6 @@
                 </li>
                 <li class="nav-item me-2">
                     <a class="nav-link {{ (request()->is('faq')) ? 'active' : '' }}" href="{{url('faq')}}">FAQ</a>
-                </li>
-                <li class="nav-item me-2">
-                    <a class="nav-link {{ (request()->is('kontak')) ? 'active' : '' }}"
-                        href="{{url('kontak')}}">Kontak</a>
                 </li>
             </ul>
             <a href=" {{ url('/auth')}}" class="btn btn-primary px-4 py-2">Masuk</a>

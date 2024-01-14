@@ -1,56 +1,64 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-        <a href="{{route('admin')}}">SPPIE</a>
+        {{-- <img style="width: 20%" src="{{url('main-assets/images/ibi-logo.png')}}" alt=""/> --}}
+        <a href="{{route('admin')}}">Aplikasi IBI Cirebon</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-        <a href="{{route('admin')}}">SPP</a>
+        <a href="{{route('admin')}}">AIBIC</a>
     </div>
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li class="nav-item dropdown {{ set_active(['admin']) }}">
             <a href="{{ route('admin')}}" class="nav-link"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         </li>
-        <li class="menu-header">Pengelolaan Data Siswa</li>
-        <li class="nav-item dropdown {{ set_active(['data-siswa.*']) }}">
+        <li class="menu-header">Publikasi</li>
+        <li class="nav-item dropdown {{ set_active(['berita.*']) }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-newspaper"></i>
+                <span>Berita</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{ route('berita.index') }}">Daftar Berita</a></li>
+                <li><a class="nav-link" href="{{ route('berita.create') }}">Tambah Berita</a></li>
+            </ul>
+        </li>
+        <li class="menu-header">Evaluasi Kinerja Bidan</li>
+        <li class="nav-item dropdown {{ set_active(['data-bidan.*']) }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i>
-                <span>Siswa</span></a>
+                <span>Visitasi</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('data-siswa.index') }}">Data Siswa</a></li>
-                <li><a class="nav-link" href="{{ route('data-siswa.create') }}">Tambah Data Siswa</a></li>
+                <li><a class="nav-link" href="{{ route('data-bidan.index') }}">Data Bidan</a></li>
+                <li><a class="nav-link" href="{{ route('data-bidan.create') }}">Tambah Data Visitasi</a></li>
             </ul>
         </li>
-        <li class="menu-header">Pengelolaan Data Kelas</li>
-        <li class="nav-item dropdown {{ set_active(['data-kelas.*']) }}">
+        <li class="menu-header">Monitoring Kinerja Bidan</li>
+        <li class="nav-item dropdown {{ set_active(['monitoring.*']) }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-friends"></i>
-                <span>Kelas</span></a>
+                <span>Monitoring</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('data-kelas.index') }}">Data Kelas</a></li>
-                <li><a class="nav-link" href="{{ route('data-kelas.create') }}">Tambah Data Kelas</a></li>
+                <li><a class="nav-link" href="{{ route('monitoring.index') }}">Data Kinerja Bidan</a></li>
+                <li><a class="nav-link" href="{{ route('monitoring.create') }}">Pelayanan</a></li>
             </ul>
         </li>
-        <li class="menu-header">Pengelolaan Data Petugas</li>
-        <li class="nav-item dropdown {{ set_active(['data-petugas.*']) }}">
+        <li class="menu-header">Pengelolaan Staff</li>
+        <li class="nav-item dropdown {{ set_active(['data-staff.*']) }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
-                <span>Petugas</span></a>
+                <span>Staff</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('data-petugas.index') }}">Data Petugas</a></li>
-                <li><a class="nav-link" href="{{ route('data-petugas.create') }}">Tambah Data Petugas</a></li>
+                <li><a class="nav-link" href="{{ route('data-staff.index') }}">Data Staff</a></li>
+                <li><a class="nav-link" href="{{ route('data-staff.create') }}">Tambah Data Staff</a></li>
             </ul>
         </li>
-        <li class="menu-header">Pengelolaan Data SPP</li>
-        <li class="nav-item dropdown" {{ set_active(['data-spp.*']) }}>
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-dollar-sign"></i>
-                <span>SPP</span></a>
+        
+        <li class="menu-header">Penempatan Bidan</li>
+        <li class="nav-item dropdown {{ set_active(['lokasi-bidan.*']) }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                <span>Lokasi Bidan</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('data-spp.index') }}">Data SPP</a></li>
-                <li><a class="nav-link" href="{{ route('data-spp.index') }}">Log History SPP</a></li>
+                <li><a class="nav-link" href="{{ route('lokasi-bidan.index') }}">Lokasi Bidan</a></li>
+                <li><a class="nav-link" href="{{ route('lokasi-bidan.create') }}">Tambah Lokasi Bidan</a></li>
             </ul>
+        </li>
+        <li class="nav-item dropdown {{ set_active(['lokasi-puskesmas.*']) }}">
+            <a href="{{ route('lokasi-puskesmas.index')}}" class="nav-link"><i class="far fa-hospital"></i><span>Lokasi Puskesmas</span></a>
         </li>
     </ul>
-
-    <div class=" mt-4 mb-4 p-3 hide-sidebar-mini">
-        <a href="{{ route('data-spp.create') }}" class="btn btn-primary btn-lg btn-block btn-icon-split">
-            <i class="fas fa-plus"></i> Tambah Transaksi
-        </a>
-    </div>
 </aside>

@@ -31,14 +31,13 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Apa itu SPPIE?
+                                        Apa itu AIBIC?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        SPPIE adalah sebuah website yang menyediakan sistem pembayaran SPP online untuk
-                                        mempermudah pembayaran SPP anda agar dapat dilakukan dimanapun, kapanpun
+                                        Aplikasi Ikatan Bidan Indonesia Cirebon
                                     </div>
                                 </div>
                             </div>
@@ -47,13 +46,13 @@
                                     <button class="accordion-button collapsed fw-bold" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                         aria-controls="collapseTwo">
-                                        Apa tujuan SPIE?
+                                        Apa tujuan AIBIC?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        SPPIE dibuat untuk membuat kemudahan pengecekan data spp agar dapat diakses
+                                        AIBIC dibuat untuk membuat kemudahan pengecekan data bidan agar dapat diakses
                                         dimana saja dan kapan saja!
                                     </div>
                                 </div>
@@ -63,20 +62,18 @@
                                     <button class="accordion-button collapsed fw-bold" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Bagaimana cara menggunakan SPPIE?
+                                        Bagaimana cara menggunakan AIBIC?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         1.
-                                        Login ke aplikasi SPPIE Menggunakan Username & Password yang telah diberikan
-                                        Segera login dengan username & password yang telah diberikan, setelah itu anda
+                                        Menghubungi staff untuk mendaftarkan diri Login ke AIBIC Menggunakan Username & Password
+                                        Segera login dengan username & password yang telah didaftarkan, setelah itu anda
                                         dapat langsung masuk ke aplikasi kami <br>
-                                        2.Segera pilih menu "Data SPP" di sidebar kiri anda, lalu anda dapat melihat
-                                        history pembayaran SPP anda
-                                        Setelah itu anda dapat melihat riwayat pembayaran anda dimana saja dan kapan
-                                        saja! <br>
+                                        2.Segera pilih menu "Visitasi" di sidebar kiri anda, lalu anda dapat melengkapi data diri anda
+                                        Setelah itu anda dapat melihat data anda dimana saja dan kapan saja! <br>
                                     </div>
                                 </div>
                             </div>
@@ -98,9 +95,8 @@
                 0 33.5px 33.5px rgba(0, 0, 0, 0.034),
                 0 53.4px 53.4px rgba(0, 0, 0, 0.039),
                 0 100px 100px rgba(0, 0, 0, 0.05);">
-                    <h1 class="fw-bold">Lakukan lebih dengan SPPIE</h1>
-                    <p class="lead">Tunggu apa lagi? segera coba aplikasi SPPIE agar anda dapat melihat history
-                        pembayaran anda dimana saja kapan saja</p>
+                    <h1 class="fw-bold">Lakukan lebih dengan AIBIC</h1>
+                    <p class="lead">Tunggu apa lagi? segera coba AIBIC</p>
                     <a class="text-white" href="{{url('/auth')}}">Masuk
                         &raquo;</a>
                 </div>

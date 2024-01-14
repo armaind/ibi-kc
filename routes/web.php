@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/auth', function () {
     if (Auth::check()) {
         switch (Auth::user()->roles) {
+            case 'BIDAN':
+                return redirect(route('bidan'));
+                break;
             case 'ADMIN':
                 return redirect(route('admin'));
                 break;
             case 'STAFF':
                 return redirect(route('staff'));
-                break;
-            case 'STUDENT':
-                return redirect(route('student'));
                 break;
             default:
                 return view('welcome');
@@ -24,8 +24,6 @@ Route::get('/auth', function () {
         return view('welcome');
     };
 })->middleware(['auth']);
-
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -44,16 +42,18 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
-
 Route::prefix('admin')
     ->middleware(['auth', 'admin'])
     ->group(function () {
         Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')
             ->name('admin');
-        Route::resource('data-siswa', 'App\Http\Controllers\Admin\StudentController');
-        Route::resource('data-petugas', 'App\Http\Controllers\Admin\StaffController');
-        Route::resource('data-kelas', 'App\Http\Controllers\Admin\ClassController');
-        Route::resource('data-spp', 'App\Http\Controllers\Admin\SppController');
+        Route::resource('data-bidan', 'App\Http\Controllers\Admin\BidanController');
+        Route::resource('data-staff', 'App\Http\Controllers\Admin\StaffController');
+        Route::resource('monitoring', 'App\Http\Controllers\Admin\MonitoringController');
+        Route::resource('lokasi-puskesmas', 'App\Http\Controllers\Admin\LokasiPuskesmasController');
+        Route::resource('berita', 'App\Http\Controllers\Admin\BeritaController');
+        Route::resource('profile', 'App\Http\Controllers\Admin\ProfileController');
+        Route::resource('lokasi-bidan', 'App\Http\Controllers\Admin\LokasiBidanController');
     });
 
 Route::prefix('staff')
@@ -61,15 +61,22 @@ Route::prefix('staff')
     ->group(function () {
         Route::get('/dashboard', 'App\Http\Controllers\Staff\DashboardController@index')
             ->name('staff');
-        Route::resource('data-spp-siswa', 'App\Http\Controllers\Staff\SppController');
+        Route::resource('profile', 'App\Http\Controllers\Staff\ProfileController');
+        Route::resource('berita-staff', 'App\Http\Controllers\Staff\BeritaController');
+        Route::resource('puskesmas', 'App\Http\Controllers\Staff\LokasiPuskesmasController');
+        Route::resource('visitasi', 'App\Http\Controllers\Staff\BidanController');
+        Route::resource('monitoring-staff', 'App\Http\Controllers\Staff\MonitoringController');
     });
 
-Route::prefix('student')
-    ->middleware(['auth', 'student'])
+Route::prefix('bidan')
+    ->middleware(['auth', 'bidan'])
     ->group(function () {
-        Route::get('/dashboard', 'App\Http\Controllers\Student\DashboardController@index')
-            ->name('student');
-        Route::resource('data-log-spp', 'App\Http\Controllers\Student\SppController');
+        Route::get('/dashboard', 'App\Http\Controllers\Bidan\DashboardController@index')
+            ->name('bidan');
+        Route::resource('profile', 'App\Http\Controllers\Bidan\ProfileController');
+        Route::resource('berita-bidan', 'App\Http\Controllers\Bidan\BeritaController');
+        Route::resource('lokasi-puskesmas-bidan', 'App\Http\Controllers\Bidan\LokasiPuskesmasController');
+        Route::resource('penempatan-bidan', 'App\Http\Controllers\Bidan\LokasiBidanController');
     });
 
 require __DIR__ . '/auth.php';

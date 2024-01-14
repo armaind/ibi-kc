@@ -4,30 +4,20 @@
 
 
 <section class="section">
-    <div class="">
-        <div class="card" style="width:100%;">
-            <div class="card-body">
-                <h2 class="card-title" style="color: black;">Update Data Siswa</h2>
-                <hr>
-                <p class="card-text"> Update data siswa meliputi Email dan Nama Lengkap.
-                    Kita tidak bisa mengubah password guru, Hanya guru yang dapat mengubah passwordnya
-                    sendiri.
-                </p>
-                <a href="#detail" class="btn btn-primary">Saya paham dan
-                    ingin melanjutkan ⭢</a>
-            </div>
+    <div class="section-header">
+        <h1>Update Data Staff AIBIC</h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="{{ route('admin')}}">Dashboard</a></div> 
+          <div class="breadcrumb-item">Data Staff</div>
         </div>
     </div>
+    <div class="section-body">
+        <h2 class="section-title">Update Data Staff AIBIC</h2>
+        <p class="section-lead">Silahkan update data data yang diperlukan</p>
+    </div>
     <div class="card card-primary">
-        <div class="col-md-12 text-center">
-            <p class="registration-title font-weight-bold display-4 mt-4" style="color:black; font-size: 50px;">
-                Update Data PETUGAS</p>
-            <p style="line-height:-30px;margin-top:-20px;">Silahkan isi data data yang diperlukan
-                dibawah </p>
-            <hr>
-        </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('data-petugas.update', $item->id) }}">
+            <form method="POST" action="{{ route('data-staff.update', $item->id) }}">
                 @method('PUT')
                 @csrf
 

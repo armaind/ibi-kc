@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="{{url('main-assets/styles/main.css')}}" />
-    <link rel="shortcut icon" href="{{ url('stisla/assets/img/stisla-fill.svg')}}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url('main-assets/images/ibi-logo.png')}}" type="image/x-icon" />
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src=" https://cdn.jsdelivr.net/npm/chart.js@2.8.0"> </script>
-    <script src="{{url('main-assets/scripts/utils.js')}}""></script> @stack('css') <title>
-        SPPIE — Sistem Pembayaran SPP </title>
+    <script src="{{url('main-assets/scripts/utils.js')}}""></script> @stack('css') 
+    <title> AIBIC </title>
 </head>

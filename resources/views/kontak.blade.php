@@ -365,8 +365,7 @@
     </section>
 
 
-    @include('includes.footer')
-    @include('includes.script')
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -388,3 +387,6 @@
 </body>
 
 </html>
+
+@include('includes.footer')
+@include('includes.script')

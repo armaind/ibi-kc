@@ -1,20 +1,19 @@
 @extends('layouts.admin.dashboard')
 
-@section('title', 'Data Petugas')
+@section('title', 'Data Staff')
 @section('content')
 
 <section class="section">
-    <div class="card">
-        <div class="card-body">
-            <h2 class="card-title text-dark">Pengelolaan Data Petugas Sppie</h2>
-            <hr>
-            <p class="card-text"> After I ran into Helen at a restaurant, I realized she was just office
-                pretty drop-dead date put in in a deck for our standup today. Who's responsible for the ask
-                for this request? who's responsible for the ask for this request? but moving the goalposts
-                gain traction. </p>
-            <a href="#" class="btn btn-primary">Tambah
-                Data Petugas ⭢ </a>
+    <div class="section-header">
+        <h1>Staff AIBIC</h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="{{ route('admin')}}">Dashboard</a></div> 
+          <div class="breadcrumb-item">Data Staff</div>
         </div>
+    </div>
+    <div class="section-body">
+        <h2 class="section-title">Staff AIBIC</h2>
+        <p class="section-lead">--</p>
     </div>
 
     <div class="row">
@@ -47,13 +46,13 @@
                                     {{ $item->email }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('data-petugas.show', $item->id) }}" class="btn btn-primary">
+                                    <a href="{{ route('data-staff.show', $item->id) }}" class="btn btn-primary">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a href="{{ route('data-petugas.edit', $item->id) }}" class="btn btn-info">
+                                    <a href="{{ route('data-staff.edit', $item->id) }}" class="btn btn-info">
                                         <i class="fa fa-pencil-alt"></i>
                                     </a>
-                                    <form action="{{ route('data-petugas.destroy', $item->id) }}" method="POST"
+                                    <form action="{{ route('data-staff.destroy', $item->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('delete')

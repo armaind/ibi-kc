@@ -8,24 +8,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 my-auto">
-                    <p class="label-top text-primary" data-aos="fade-up" data-aos-duration="900">SPPIE —
-                        SISTEM PEMBAYARAN SPP </p>
-                    <h1 data-aos="fade-up" data-aos-duration="1100">Sistem pembayaran SPP untuk mempermudah pembayaran
-                        SPP anda
+                    <p class="label-top text-primary" data-aos="fade-up" data-aos-duration="900">AIBIC</p>
+                    <h1 data-aos="fade-up" data-aos-duration="1100">Aplikasi Ikatan Bidan Indonesia Cirebon
                     </h1>
-                    <p data-aos="fade-up" data-aos-duration="1300">
-                        SPPIE adalah sebuah website yang menyediakan sistem pembayaran SPP online untuk mempermudah
-                        pembayaran SPP anda agar dapat dilakukan dimanapun, kapanpun
-                    </p>
-                    <a data-aos="fade-up" data-aos-duration="1500" href="{{url('/auth')}}"
+                    {{-- <p data-aos="fade-up" data-aos-duration="1300">
+                        Ikatan Bidan Indonesia (IBI) merupakan organisasi profesi bidan di Indonesia. Wadah Para bidan dalam mencapai tujuan melalui kebijakan peningkatan profesionalisme anggota guna menjamin masyarakat mendapatkan pelayanan berkualitas. IBI didirikan pada tanggal 24 Juni 1951, menjadi anggota Kongres Wanita Indonesia (KOWANI)  pada tahun 1951 dan bergabung menjadi anggota ICM (International Confederation of Midwives) pada tahun 1956. Kantor pusat berkedudukan di Jakarta, IBI memiliki perwakilan di 34 Provinsi, 509 kota/kabupaten dan 3728 ranting diseluruh indonesia.
+                    </p> --}}
+                    {{-- <a data-aos="fade-up" data-aos-duration="1500" href="{{url('/auth')}}"
                         class="btn btn-primary px-5 py-2 mb-2 mb-md-0">Mulai sekarang &nbsp; →
                     </a>
                     <a data-aos="fade-up" data-aos-duration="1700" href="#cara-lapor"
                         class="btn btn-outline-primary px-5 py-2">Cara bayar
-                    </a>
+                    </a> --}}
                 </div>
                 <div class="col-md-5" data-aos="fade-up" data-aos-duration="1700">
-                    <img style="width: 80%" src="{{url('main-assets/images/hero-image.png')}}" alt=""
+                    <img style="width: 80%" src="{{url('main-assets/images/ibi-logo.png')}}" alt=""
                         class="img-fluid d-none d-lg-block d-print-block float-md-end" srcset="" />
                 </div>
             </div>
@@ -36,20 +33,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 mx-auto text-center">
-                    <p data-aos="fade-up" data-aos-duration="1000" class="text-primary label-top">TENTANG SPPIE</p>
-                    <h1 data-aos="fade-up" data-aos-duration="1200">APA ITU SPPIE?</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" class="text-primary label-top">TENTANG IBI</p>
+                    <h1 data-aos="fade-up" data-aos-duration="1200">APA ITU IBI?</h1>
                     <hr data-aos="fade-up" data-aos-duration="1400" width="50%" class="mx-auto" />
                     <p data-aos="fade-up" data-aos-duration="1600">
-                        SPPIE adalah sebuah website yang menyediakan sistem pembayaran SPP online untuk mempermudah
-                        pembayaran SPP anda agar dapat dilakukan dimanapun, kapanpun
+                        Ikatan Bidan Indonesia (IBI) merupakan organisasi profesi bidan di Indonesia. Wadah Para bidan dalam mencapai tujuan melalui kebijakan peningkatan profesionalisme anggota guna menjamin masyarakat mendapatkan pelayanan berkualitas.
                     </p>
-                    <a href="{{url('/faq')}}" data-aos="fade-up" data-aos-duration="1800"
+                    <a href="{{url('/tentang-kami')}}" data-aos="fade-up" data-aos-duration="1800"
                         class="btn btn-outline-primary px-4 py-2">Baca lebih lanjut</a>
                 </div>
             </div>
         </div>
     </section>
-
+    {{-- @section('berita')
+        <div class="row">
+          @forelse ($berita as $ber)
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <article class="article article-style-b">
+              <div class="article-header">
+                <div class="article-image" data-background="{{ asset('images/' . $ber->thumbnail) }}">
+                </div>
+                <div class="article-badge">
+                  <div class="article-badge-item bg-danger"><i class="fas fa-fire"></i> Trending</div>
+                </div>
+              </div>
+              <div class="article-details">
+                <div class="article-title">
+                  <h2><a href="{{route('berita.show', $ber->judul)}}">{{ $ber->judul }}</a></h2>
+                  <h7>{{ $ber->kategori }} | <i style="font-size: 12px" class="icofont icofont-user"></i> {{ $ber->name }}</h7>
+                  <p style="font-size:10px;">{{ $ber->tanggal }}</p>
+                  <div> {!!$ber->isi_berita !!}</div>
+                </div>
+                <div class="article-cta">
+                  <a href="{{route('berita.show', $ber->judul)}}">Read More <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+          @empty
+          @endforelse
+        </div>
+      @endsection --}}
     <section class="about-section-2 mt-100">
         <div class="container">
             <div class="row">
@@ -58,11 +82,10 @@
                 </div>
                 <div class="col-md-7 my-auto">
                     <p data-aos="fade-up" data-aos-duration="1000" class="text-primary label-top">KEMUDAHAN MENGGUNAKAN
-                        SPPIE</p>
-                    <h1 data-aos="fade-up" data-aos-duration="1200">Pembayaran SPP tak pernah semudah ini</h1>
+                        AIBIC</p>
+                    <h1 data-aos="fade-up" data-aos-duration="1200">Pengecekan Visitasi data Bidan tak pernah semudah ini</h1>
                     <p data-aos="fade-up" data-aos-duration="1400">
-                        Dengan adanya SPPIE, kemudahan pembayaran SPP dapat dilakukan oleh petugas juga siswa dan juga
-                        orang tua siswa dapat melihat log history pembayaran nya dimanapun, kapanpun.
+                        Dengan adanya AIBIC, kemudahan pengecekan data bidan agar dapat diakses dimana saja dan kapan saja!
                     </p>
                     <a id="cara-lapor" href="{{url('/auth')}}">
                         <p data-aos="fade-up" data-aos-duration="1600" class="text-primary"
@@ -79,14 +102,13 @@
                 <div class="header-instruction text-center">
                     <div class="col-md-7 mx-auto">
                         <p class="text-primary label-top" data-aos="fade-up" data-aos-duration="1000">BAGAIMANA
-                            SPPIE
-                            BEKERJA</p>
-                        <h1 data-aos="fade-up" data-aos-duration="1200">CARA LOGIN & PENGGUNAAN BAGI SISWA</h1>
+                            AIBIC BEKERJA</p>
+                        <h1 data-aos="fade-up" data-aos-duration="1200">CARA LOGIN & PENGGUNAAN BAGI BIDAN</h1>
                         <p data-aos="fade-up" data-aos-duration="1400">
-                            {{-- Untuk anda yang masih baru kenal dengan kami, kami berikan
+                            Untuk anda yang masih baru kenal dengan kami, kami berikan
                             caranya kok dibawah bagaimana caranya untuk menggunakan aplikasi
-                            ini --}}
-                            Cara masuk dan penggunaan pada aplikasi SPPIE, akan kami jelaskan secara rinci dibawah
+                            ini
+                            Cara masuk dan penggunaan pada AIBIC, akan kami jelaskan secara rinci dibawah
                             ini.
                         </p>
                     </div>
@@ -97,11 +119,9 @@
                     <p data-aos="fade-up" data-aos-duration="1000" class="mb-3"><i
                             class="lni lni-camera icon-top bg-primary px-3 py-2 text-center"></i></p>
                     <p data-aos="fade-up" data-aos-duration="1200" class="text-primary label-top">LANGKAH PERTAMA</p>
-                    <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">Login ke aplikasi SPPIE Menggunakan
-                        Username & Password yang telah diberikan</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">Menghubungi staff untuk mendaftarkan diri,  Login ke AIBIC Menggunakan Username & Password</h1>
                     <p data-aos="fade-up" data-aos-duration="1600">
-                        Segera login dengan username & password yang telah diberikan, setelah itu anda dapat langsung
-                        masuk ke aplikasi kami
+                        Segera login dengan username & password, setelah itu anda dapat langsung masuk ke aplikasi kami
                     </p>
                     <a href="{{url('/faq')}}">
                         <p class="text-primary" style="text-decoration: none" data-aos="fade-up"
@@ -121,38 +141,16 @@
                             class="lni lni-lock icon-top bg-primary px-3 py-2 text-center"></i></p>
                     <p data-aos="fade-up" data-aos-duration="1200" class="text-primary label-top">LANGKAH KEDUA</p>
                     <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">
-                        Segera pilih menu "Data SPP" di sidebar kiri anda, lalu anda dapat melihat history pembayaran
-                        SPP anda
+                        Segera pilih menu "Visitasi" di sidebar kiri anda, lalu anda dapat melengkapi data diri anda
                     </h1>
                     <p data-aos="fade-up" data-aos-duration="1600">
-                        Setelah itu anda dapat melihat riwayat pembayaran anda dimana saja dan kapan saja!
+                        Setelah itu anda dapat melihat data anda dimana saja dan kapan saja!
                     </p>
                     <a href="{{url('/faq')}}">
                         <p class="text-primary" style="text-decoration: none" data-aos="fade-up"
                             data-aos-duration="1800"> Selengkapnya →</p>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bonus-section mt-100">
-        <div class="container">
-            <div class="bg-primary text-white p-5 rounded" data-aos="fade-up" data-aos-duration="1600" style="box-shadow:
-            0 1.7px 1.7px rgba(0, 0, 0, 0.011),
-            0 3.9px 3.9px rgba(0, 0, 0, 0.016),
-            0 6.7px 6.7px rgba(0, 0, 0, 0.02),
-            0 10.3px 10.3px rgba(0, 0, 0, 0.023),
-            0 15.2px 15.2px rgba(0, 0, 0, 0.027),
-            0 22.3px 22.3px rgba(0, 0, 0, 0.03),
-            0 33.5px 33.5px rgba(0, 0, 0, 0.034),
-            0 53.4px 53.4px rgba(0, 0, 0, 0.039),
-            0 100px 100px rgba(0, 0, 0, 0.05);">
-                <h1 class="fw-bold">Lakukan lebih dengan SPPIE</h1>
-                <p class="lead">Tunggu apa lagi? segera coba aplikasi SPPIE agar anda dapat melihat history pembayaran
-                    anda dimana saja kapan saja</p>
-                <a class="text-white" href="{{url('/auth')}}">Masuk
-                    &raquo;</a>
             </div>
         </div>
     </section>
