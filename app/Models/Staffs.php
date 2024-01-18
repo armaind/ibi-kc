@@ -10,8 +10,8 @@ class Staffs extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'nisn', 'name', 'password', 'username', 'email',
-        'address', 'phone_number', 'class', 'roles'
+        'name', 'password', 'username', 'email',
+        'address', 'telp_rumah', 'roles'
     ];
 
     public function setPasswordAttribute($password)

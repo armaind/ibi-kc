@@ -15,7 +15,9 @@ class CreateMonitoringsTable extends Migration
     {
         Schema::create('monitorings', function (Blueprint $table) {
             $table->id();
-            $table->string('nomerdokumen');
+            $table->string('name')->unique();
+            $table->string('nomerregistrasi')->unique();
+            $table->string('nomerdokumen')->unique();
             $table->string('nomerrevisi');
             $table->string('tanggalterbit');
             $table->string('halaman');

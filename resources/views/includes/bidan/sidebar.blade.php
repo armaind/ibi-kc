@@ -20,19 +20,37 @@
                 {{-- <li><a class="nav-link" href="{{ route('berita.create') }}">Tambah Berita</a></li> --}}
             </ul>
         </li>
-        {{-- <li class="menu-header">Evaluasi Kinerja Bidan</li>
-        <li class="nav-item dropdown {{ set_active(['data-bidan.*']) }}">
+        <li class="menu-header">Evaluasi Kinerja Bidan</li>
+        <li class="nav-item dropdown {{ set_active(['data-bidann.*']) }}">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i>
                 <span>Visitasi</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('data-bidan.index') }}">Data Bidan</a></li>
-                <li><a class="nav-link" href="{{ route('data-bidan.create') }}">Tambah Data Visitasi</a></li>
+                <li><a class="nav-link" href="{{ route('data-bidann.index') }}">Data Bidan</a></li>
+                {{-- <li><a class="nav-link" href="{{ route('data-bidann.create') }}">Tambah Data Visitasi</a></li> --}}
             </ul>
-        </li> --}}
-        
+        </li>
+        <li class="menu-header">Monitoring Kinerja Bidan</li>
+        <li class="nav-item dropdown {{ set_active(['monitoring-bidan.*']) }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                <span>Monitoring</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{ route('monitoring-bidan.index') }}">Data Kinerja Bidan</a></li>
+                {{-- <li><a class="nav-link" href="{{ route('monitoring-bidan.create') }}">Pelayanan</a></li> --}}
+            </ul>
+        </li>
+        <li class="menu-header">Pengelolaan koordinator</li>
+        <li class="nav-item dropdown {{ set_active(['datakoordinator.*']) }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-friends"></i>
+                <span>Koordinator</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{ route('datakoordinator.index') }}">Data Koordinator</a></li>
+                {{-- <li><a class="nav-link" href="{{ route('datakoordinator.create') }}">Tambah Koordinator</a></li> --}}
+            </ul>
+        </li>
+
         <li class="menu-header">Penempatan Bidan</li>
         <li class="nav-item dropdown {{ set_active(['penempatan-bidan.*']) }}">
-            <a href="{{ route('penempatan-bidan.index')}}" class="nav-link"><i class="fas fa-chalkboard-teacher"></i><span>Lokasi Bidan</span></a>
+            <a href="{{ route('penempatan-bidan.index')}}" class="nav-link"><i class="fas fa-location-arrow"></i><span>Lokasi Bidan</span></a>
         </li>
         <li class="nav-item dropdown {{ set_active(['lokasi-puskesmas.*']) }}">
             <a href="{{ route('lokasi-puskesmas-bidan.index')}}" class="nav-link"><i class="far fa-hospital"></i><span>Lokasi Puskesmas</span></a>

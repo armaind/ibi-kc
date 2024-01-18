@@ -33,7 +33,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Staff</h4>
+                        <h4>Koordinator</h4>
                     </div>
                     <div class="card-body">
                         {{ DB::table('users')->where('roles', 'STAFF')->count() }}

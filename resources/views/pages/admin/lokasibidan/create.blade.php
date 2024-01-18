@@ -13,11 +13,21 @@
     </div>
     <div class="section-body">
         <h2 class="section-title">Lokasi Penempatan Bidan</h2>
-        <p class="section-lead">This article component is based on card and flexbox.</p>
+        <p class="section-lead">---.</p>
     </div>
     <div class="card card-primary">
         <div class="card-body">
-            <form method="POST" action="{{ route('lokasi-bidan.store') }}">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        <li><h4>Error</h4></li>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <form method="POST" action="{{ route('lokasi-bidan.store') }}" validate>
                 @csrf
                 <p class="font-weight-bold" style="color:black; font-size: 15px;"> Identitas:</p>
                 <div class="form-row">
@@ -102,7 +112,6 @@
                         <input id="halaman" type="text" value="{{ old('halaman') }}" class="form-control" name="halaman" required>
                     </div> --}}
                 </div>
-
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">simpan</button>
                 </div>

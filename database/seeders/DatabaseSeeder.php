@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         // Adding user that has admin roles
         DB::table('users')->insert([
             'name' => 'Admin',
-            'username' => 'admin@aibic.com',
+            'username' => 'admin',
             'email' => 'admin@aibic.com',
             'password' => Hash::make('admin'),
             'roles' => 'ADMIN',
@@ -45,17 +45,17 @@ class DatabaseSeeder extends Seeder
             // 'alamatrumah' => 'Jl RA Kartini 26 Ventura Bldg Lt 8,Cilandak Barat',
             // 'telp_rumah' => '0217504417',
             'name' => 'Bidan',
-            'username' => 'bidan@aibic.com',
+            'username' => 'bidan',
             'email' => 'bidan@aibic.com',
-            'password' => Hash::make('123456'),
+            'password' => Hash::make('bidan'),
             'roles' => 'BIDAN',
         ]);
         // Adding user that has staff roles
         DB::table('users')->insert([
-            'name' => 'Staff',
-            'username' => 'staff@aibic.com',
-            'email' => 'staff@aibic.com',
-            'password' => Hash::make('123456'),
+            'name' => 'Koordinator',
+            'username' => 'koordinator',
+            'email' => 'koordinator@aibic.com',
+            'password' => Hash::make('koordinator'),
             'roles' => 'STAFF',
         ]);
 

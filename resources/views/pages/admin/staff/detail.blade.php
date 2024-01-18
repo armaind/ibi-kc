@@ -1,18 +1,18 @@
 @extends('layouts.admin.dashboard')
 
-@section('title', 'Detail Staff')
+@section('title', 'Detail Koordinator')
 @section('content')
 
 <section class="section">
     <div class="section-header">
-        <h1>Detail Staff AIBIC</h1>
+        <h1>Detail Koordinator AIBIC</h1>
         <div class="section-header-breadcrumb">
           <div class="breadcrumb-item active"><a href="{{ route('admin')}}">Dashboard</a></div> 
-          <div class="breadcrumb-item">Data Staff</div>
+          <div class="breadcrumb-item">Data Koordinator</div>
         </div>
     </div>
     <div class="section-body">
-        <h2 class="section-title">Detail Staff AIBIC</h2>
+        <h2 class="section-title">Detail Koordinator AIBIC</h2>
         <p class="section-lead">--</p>
     </div>
     <div class="card card-primary">
@@ -22,10 +22,6 @@
                     <tr>
                         <th>Nama</th>
                         <td>{{ $item->name }}</td>
-                    </tr>
-                    <tr>
-                        <th>NISN</th>
-                        <td>{{ $item->nisn }}</td>
                     </tr>
                     <tr>
                         <th>Username</th>
@@ -43,13 +39,9 @@
                         <th>Nomor Telepon</th>
                         <td>{{ $item->phone_number }}</td>
                     </tr>
-                    <tr>
-                        <th>Kelas</th>
-                        <td>{{ $item->class }}</td>
-                    </tr>
                 </tbody>
             </table>
-            <a href="{{url('/admin/data-bidan')}}" class="btn btn-primary">Kembali </a>
+            <a href="{{url('/admin/data-koordinator')}}" class="btn btn-primary">Kembali </a>
         </div>
     </div>
 </section>

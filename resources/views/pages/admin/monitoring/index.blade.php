@@ -23,7 +23,9 @@
                     <div class="table-responsive">
                         <table id="example" class="table align-items-center table-flush">
                             <thead class="thead-light">
-                                <tr>
+                                <tr> 
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nomer Registrasi</th>
                                     <th scope="col">Nomer Dokumen</th>
                                     <th scope="col">Nomer Revisi</th>
                                     <th scope="col">Tanggal Terbit</th>
@@ -34,8 +36,14 @@
                                 @forelse ($items as $item)
                                 <tr>
                                     <th scope="row">
-                                        {{ $item->nomerdokumen }}
+                                        {{ $item->name }}
                                     </th>
+                                    <td>
+                                        {{ $item->nomerregistrasi }}
+                                    </td>
+                                    <td>
+                                        {{ $item->nomerdokumen }}
+                                    </td>
                                     <td>
                                         {{ $item->nomerrevisi }}
                                     </td>

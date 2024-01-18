@@ -1,23 +1,23 @@
 @extends('layouts.admin.dashboard')
 
-@section('title', 'Tambah Data Staff')
+@section('title', 'Tambah Data Koordinator')
 @section('content')
 
 <section class="section">
     <div class="section-header">
-        <h1>Staff AIBIC</h1>
+        <h1>Koordinator AIBIC</h1>
         <div class="section-header-breadcrumb">
           <div class="breadcrumb-item active"><a href="{{ route('admin')}}">Dashboard</a></div> 
-          <div class="breadcrumb-item">Data Staff</div>
+          <div class="breadcrumb-item">Data Koordinator</div>
         </div>
     </div>
     <div class="section-body">
-        <h2 class="section-title">Tambah Data Staff AIBIC</h2>
+        <h2 class="section-title">Tambah Data Koordinator AIBIC</h2>
         <p class="section-lead">Silahkan isi data data yang diperlukan</p>
     </div>
     <div class="card card-primary">
         <div class="card-body">
-            <form method="POST" action="{{ route('data-staff.store') }}">
+            <form method="POST" action="{{ route('data-koordinator.store') }}">
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-12">

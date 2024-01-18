@@ -24,13 +24,13 @@
         </div>
         <div class="article-details">
           <div class="article-title">
-            <h2><a href="{{route('berita-staff.show', $item->judul)}}">{{ substr(strip_tags(htmlspecialchars_decode($item->judul)), 0, 30) }}...</a></h2>
+            <h2><a href="{{route('berita-koordinator.show', $item->judul)}}">{{ substr(strip_tags(htmlspecialchars_decode($item->judul)), 0, 30) }}...</a></h2>
             {{-- <h7>{{ $item->kategori }} | <i style="font-size: 12px" class="icofont icofont-user"></i> {{ $item->name }}</h7> --}}
             <p style="font-size:10px;">{{ $item->tanggal }}</p>
             <div> {{ substr(strip_tags(htmlspecialchars_decode($item->isi_berita)), 0, 40) }}...</a></div>
           </div>
           <div class="article-cta">
-            <a href="{{route('berita-staff.show', $item->judul)}}">Read More <i class="fas fa-chevron-right"></i></a>
+            <a href="{{route('berita-koordinator.show', $item->judul)}}">Read More <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </article>

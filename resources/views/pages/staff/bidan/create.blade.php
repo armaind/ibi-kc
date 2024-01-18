@@ -22,16 +22,16 @@
                 <p class="font-weight-bold" style="color:black; font-size: 15px;"> A. IDENTITAS:</p>
                 <div class="form-group">
                     <label for="name">Nama Lengkap<span class="text-danger">*</span></label>
-                    <input id="name" type="text" value="{{ old('name') }}" class="form-control" name="name" required>
+                    <input id="name" type="text" value="{{ Auth::user()->name }}" class="form-control" name="name" readonly>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="email">Email<span class="text-danger">*</span></label>
-                        <input id="email" type="text" value="{{ old('email') }}" class="form-control" name="email" required>
+                        <input id="email" type="text" value="{{ Auth::user()->email }}" class="form-control" name="email" readonly>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="username">Nama Panggilan<span class="text-danger">*</span></label>
-                        <input id="username" type="text" value="{{ old('username') }}" class="form-control" name="username" required>
+                        <input id="username" type="text" value="{{ Auth::user()->username }}" class="form-control" name="username" readonly>
                     </div>
                 </div>
                 <p class="card-text" style="color:black;"> Alamat Rumah Lengkap:</p>
@@ -122,22 +122,22 @@
                     <div class="form-group col-md-6">
                         <label for="tenagakesehatanlain">Tenaga Kesehatan Lain<span class="text-danger">*</span></label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="tenagakesehatanlain" value="Ada">
+                            <input type="radio" name="tenagakesehatanlain" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="tenagakesehatanlain" value="Tidak Ada">
+                            <input type="radio" name="tenagakesehatanlain" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="tenaganonkesehatan">Tenaga Non Kesehatan<span class="text-danger">*</span></label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="tenaganonkesehatan" value="Ada">
+                            <input type="radio" name="tenaganonkesehatan" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="tenaganonkesehatan" value="Tidak Ada">
+                            <input type="radio" name="tenaganonkesehatan" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
@@ -148,85 +148,85 @@
                     <div class="form-group col-md-12">
                         <label for="bangunan">1. Bangunan</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="bangunan" value="Rumah">
+                            <input type="radio" name="bangunan" value="Rumah">
                             <span class="ml-0">Rumah</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="bangunan" value="Bagian dari Rumah">
+                            <input type="radio" name="bangunan" value="Bagian dari Rumah">
                             <span class="ml-0">Bagian dari Rumah</span>
                         </label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="bangunan" value="Bagian dari Kantor/Tempat Kerja">
+                            <input type="radio" name="bangunan" value="Bagian dari Kantor/Tempat Kerja">
                             <span class="ml-0">Bagian dari Kantor/Tempat Kerja</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="bangunan" value="Bagian dari Gedung">
+                            <input type="radio" name="bangunan" value="Bagian dari Gedung">
                             <span class="ml-0">Bagian dari Gedung</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ruangtunggu">2. Ruang Tunggu</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="ruangtunggu" value="Ada">
+                            <input type="radio" name="ruangtunggu" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="ruangtunggu" value="Tidak Ada">
+                            <input type="radio" name="ruangtunggu" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ruangperiksa">3. Ruang Periksa</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="ruangperiksa" value="Ada">
+                            <input type="radio" name="ruangperiksa" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="ruangperiksa" value="Tidak Ada">
+                            <input type="radio" name="ruangperiksa" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ruangbersalin">4. Ruang Bersalin</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="ruangbersalin" value="Ada">
+                            <input type="radio" name="ruangbersalin" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="ruangbersalin" value="Tidak Ada">
+                            <input type="radio" name="ruangbersalin" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ruangnifas">5. Ruang Nifas</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="ruangnifas" value="Ada">
+                            <input type="radio" name="ruangnifas" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="ruangnifas" value="Tidak Ada">
+                            <input type="radio" name="ruangnifas" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="wc">6. WC/Kamar Mandi</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="wc" value="Ada">
+                            <input type="radio" name="wc" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="wc" value="Tidak Ada">
+                            <input type="radio" name="wc" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ruanglain">7. Ruang lain sesuai kebutuhan</label>
                         <label class="col-md-12"> 
-                            <input type="checkbox" name="ruanglain" value="Ada">
+                            <input type="radio" name="ruanglain" value="Ada">
                             <span class="ml-0">Ada</span>
                         </label>
                         <label class="col-md-6"> 
-                            <input type="checkbox" name="ruanglain" value="Tidak Ada">
+                            <input type="radio" name="ruanglain" value="Tidak Ada">
                             <span class="ml-0">Tidak Ada</span>
                         </label>
                     </div>

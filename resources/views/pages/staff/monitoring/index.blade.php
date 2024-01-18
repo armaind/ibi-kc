@@ -23,7 +23,9 @@
                     <div class="table-responsive">
                         <table id="example" class="table align-items-center table-flush">
                             <thead class="thead-light">
-                                <tr>
+                                <tr> 
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nomer Registrasi</th>
                                     <th scope="col">Nomer Dokumen</th>
                                     <th scope="col">Nomer Revisi</th>
                                     <th scope="col">Tanggal Terbit</th>
@@ -34,8 +36,14 @@
                                 @forelse ($items as $item)
                                 <tr>
                                     <th scope="row">
-                                        {{ $item->nomerdokumen }}
+                                        {{ $item->name }}
                                     </th>
+                                    <td>
+                                        {{ $item->nomerregistrasi }}
+                                    </td>
+                                    <td>
+                                        {{ $item->nomerdokumen }}
+                                    </td>
                                     <td>
                                         {{ $item->nomerrevisi }}
                                     </td>
@@ -43,13 +51,13 @@
                                         {{ $item->tanggalterbit }}
                                     </td>
                                     <td>
-                                        <a href="{{ route('monitoring-staff.show', $item->id) }}" class="btn btn-info">
+                                        <a href="{{ route('monitoring-koordinator.show', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-eye"></i>
                                         </a>
-                                        <a href="{{ route('monitoring-staff.edit', $item->id) }}" class="btn btn-info">
+                                        <a href="{{ route('monitoring-koordinator.edit', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('monitoring-staff.destroy', $item->id) }}" method="POST"
+                                        <form action="{{ route('monitoring-koordinator.destroy', $item->id) }}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('delete')

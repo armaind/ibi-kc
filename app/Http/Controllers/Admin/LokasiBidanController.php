@@ -41,9 +41,20 @@ class LokasiBidanController extends Controller
     public function store(Request $request)
     {
         
-        $data = $request->all();
+        $request->validate([
+            'nrbidan' => 'required',
+            'name' => 'required',
+        ]);
 
-        LokasiBidan::create($data);
+        $data = LokasiBidan::create([
+            'id' => $request->id,
+            'name' => $request->name,
+            'nrbidan' => $request->nrbidan,
+            'puskesmas' => $request->puskesmas,
+        ]);
+
+
+        // $data = LokasiBidan::create($request->all());
 
         return redirect()->route('lokasi-bidan.index');
     }

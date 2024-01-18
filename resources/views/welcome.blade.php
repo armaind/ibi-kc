@@ -119,7 +119,7 @@
                     <p data-aos="fade-up" data-aos-duration="1000" class="mb-3"><i
                             class="lni lni-camera icon-top bg-primary px-3 py-2 text-center"></i></p>
                     <p data-aos="fade-up" data-aos-duration="1200" class="text-primary label-top">LANGKAH PERTAMA</p>
-                    <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">Menghubungi staff untuk mendaftarkan diri,  Login ke AIBIC Menggunakan Username & Password</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">Menghubungi koordinator untuk mendaftarkan diri,  Login ke AIBIC Menggunakan Username & Password</h1>
                     <p data-aos="fade-up" data-aos-duration="1600">
                         Segera login dengan username & password, setelah itu anda dapat langsung masuk ke aplikasi kami
                     </p>

@@ -23,6 +23,18 @@
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-6">
+                        <label for="name">Nama</label>
+                        <input id="name" type="text" class="form-control" value="{{ $item->name }}"
+                            name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="nomerregistrasi">Nomer Registrasi</label>
+                        <input id="nomerregistrasi" type="text" value="{{ $item->nomerregistrasi }}" class="form-control"
+                            name="nomerregistrasi" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
                         <label for="nomerdokumen">Nomer Dokumen</label>
                         <input id="nomerdokumen" type="text" class="form-control" value="{{ $item->nomerdokumen }}"
                             name="nomerdokumen" required>

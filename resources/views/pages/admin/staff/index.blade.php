@@ -1,18 +1,18 @@
 @extends('layouts.admin.dashboard')
 
-@section('title', 'Data Staff')
+@section('title', 'Data Koordinator')
 @section('content')
 
 <section class="section">
     <div class="section-header">
-        <h1>Staff AIBIC</h1>
+        <h1>Koordinator AIBIC</h1>
         <div class="section-header-breadcrumb">
           <div class="breadcrumb-item active"><a href="{{ route('admin')}}">Dashboard</a></div> 
-          <div class="breadcrumb-item">Data Staff</div>
+          <div class="breadcrumb-item">Data Koordinator</div>
         </div>
     </div>
     <div class="section-body">
-        <h2 class="section-title">Staff AIBIC</h2>
+        <h2 class="section-title">Koordinator AIBIC</h2>
         <p class="section-lead">--</p>
     </div>
 
@@ -23,7 +23,6 @@
                     <table id="example" class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">ID</th>
                                 <th scope="col">NAMA</th>
                                 <th scope="col">USERNAME</th>
                                 <th scope="col">EMAIL</th>
@@ -34,11 +33,8 @@
                             @forelse ($items as $item)
                             <tr>
                                 <th scope="row">
-                                    {{ $item->id }}
-                                </th>
-                                <td>
                                     {{ $item->name }}
-                                </td>
+                                </th>
                                 <td>
                                     {{ $item->username }}
                                 </td>
@@ -46,13 +42,13 @@
                                     {{ $item->email }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('data-staff.show', $item->id) }}" class="btn btn-primary">
+                                    <a href="{{ route('data-koordinator.show', $item->id) }}" class="btn btn-primary">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a href="{{ route('data-staff.edit', $item->id) }}" class="btn btn-info">
+                                    <a href="{{ route('data-koordinator.edit', $item->id) }}" class="btn btn-info">
                                         <i class="fa fa-pencil-alt"></i>
                                     </a>
-                                    <form action="{{ route('data-staff.destroy', $item->id) }}" method="POST"
+                                    <form action="{{ route('data-koordinator.destroy', $item->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('delete')

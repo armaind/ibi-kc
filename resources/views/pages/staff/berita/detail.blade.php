@@ -50,16 +50,16 @@
         </article>
         <div class="d-flex">
             <div class="d-flex flex-grow-1 align-items-center">
-                <a href="{{route('berita-staff.index')}}" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">Kembali</a>
-                <a href="{{route('berita-staff.edit', $item->judul)}}" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">Edit</a>
+                <a href="{{route('berita-koordinator.index')}}" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">Kembali</a>
+                {{-- <a href="{{route('berita-koordinator.edit', $item->judul)}}" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">Edit</a> --}}
             </div>
-            <div class="p-2">
-                <form class="pull-right" action="{{route('berita-staff.destroy', $item->id)}}" method="POST" class="d-inline">
+            {{-- <div class="p-2">
+                <form class="pull-right" action="{{route('berita-koordinator.destroy', $item->id)}}" method="POST" class="d-inline">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn btn-danger" type="submit">Hapus</button>
                 </form>
-            </div>
+            </div> --}}
         </div>
 </section>
   

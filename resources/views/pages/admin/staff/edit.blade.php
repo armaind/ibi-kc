@@ -5,19 +5,19 @@
 
 <section class="section">
     <div class="section-header">
-        <h1>Update Data Staff AIBIC</h1>
+        <h1>Update Data Koordinator AIBIC</h1>
         <div class="section-header-breadcrumb">
           <div class="breadcrumb-item active"><a href="{{ route('admin')}}">Dashboard</a></div> 
-          <div class="breadcrumb-item">Data Staff</div>
+          <div class="breadcrumb-item">Data Koordinator</div>
         </div>
     </div>
     <div class="section-body">
-        <h2 class="section-title">Update Data Staff AIBIC</h2>
+        <h2 class="section-title">Update Data Koordinator AIBIC</h2>
         <p class="section-lead">Silahkan update data data yang diperlukan</p>
     </div>
     <div class="card card-primary">
         <div class="card-body">
-            <form method="POST" action="{{ route('data-staff.update', $item->id) }}">
+            <form method="POST" action="{{ route('data-koordinator.update', $item->id) }}">
                 @method('PUT')
                 @csrf
 

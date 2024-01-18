@@ -33,7 +33,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        return view('pages.staff.berita.create');
+        // return view('pages.staff.berita.create');
     }
 
     /**
@@ -44,43 +44,43 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'thumbnail' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+        // $this->validate($request, [
+        //     'thumbnail' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
+        // ]);
 
-        $validated = $request->validate([
-            'judul' => 'required|max:225',
-            'headline' => 'required|max:45',
-            'kategori' => 'required|max:64',
-            'isi_berita' => 'required',
-        ]);
-        $data = Berita::create($request->all());
-        if ($request->hasFile('thumbnail')) {
-            $request->file('thumbnail')->move('images/', $request->file('thumbnail')->getClientOriginalName());
-            $data->thumbnail = $request->file('thumbnail')->getClientOriginalName();
-            $data->save();
-            ([
-                'judul' => $request->judul,
-                'headline' => $request->headline,
-                'kategori' => $request->kategori,
-                'thumbnail' => $request->thumbnail,
-                'tanggal' => $request->tanggal,
-                'name' => $request->name,
-                'isi_berita' => $request->isi_berita
-            ]);
-        } else {
-            ([
-                'judul' => $request->judul,
-                'headline' => $request->headline,
-                'kategori' => $request->kategori,
-                'thumbnail' => 'thumbnail-default.jpg',
-                'tanggal' => $request->tanggal,
-                'name' => $request->name,
-                'isi_berita' => $request->isi_berita
-            ]);
-        }
+        // $validated = $request->validate([
+        //     'judul' => 'required|max:225',
+        //     'headline' => 'required|max:45',
+        //     'kategori' => 'required|max:64',
+        //     'isi_berita' => 'required',
+        // ]);
+        // $data = Berita::create($request->all());
+        // if ($request->hasFile('thumbnail')) {
+        //     $request->file('thumbnail')->move('images/', $request->file('thumbnail')->getClientOriginalName());
+        //     $data->thumbnail = $request->file('thumbnail')->getClientOriginalName();
+        //     $data->save();
+        //     ([
+        //         'judul' => $request->judul,
+        //         'headline' => $request->headline,
+        //         'kategori' => $request->kategori,
+        //         'thumbnail' => $request->thumbnail,
+        //         'tanggal' => $request->tanggal,
+        //         'name' => $request->name,
+        //         'isi_berita' => $request->isi_berita
+        //     ]);
+        // } else {
+        //     ([
+        //         'judul' => $request->judul,
+        //         'headline' => $request->headline,
+        //         'kategori' => $request->kategori,
+        //         'thumbnail' => 'thumbnail-default.jpg',
+        //         'tanggal' => $request->tanggal,
+        //         'name' => $request->name,
+        //         'isi_berita' => $request->isi_berita
+        //     ]);
+        // }
         
-        return redirect('berita-staff.index');
+        // return redirect('berita-koordinator.index');
     }
     
     /**
@@ -106,11 +106,11 @@ class BeritaController extends Controller
      */
     public function edit($judul)
     {
-        $item = Berita::where('judul', $judul)->first();
+        // $item = Berita::where('judul', $judul)->first();
         
-        return view('pages.staff.berita.edit', [
-            'item' => $item
-        ]);
+        // return view('pages.staff.berita.edit', [
+        //     'item' => $item
+        // ]);
     }
     
     /**
@@ -122,38 +122,38 @@ class BeritaController extends Controller
      */
     public function update(Request $request, $judul)
     {
-        $data = $request->all();
+        // $data = $request->all();
 
-        // $this->validate($request, [
-        //     'thumbnail' => 'file|image|mimes:jpeg,png,jpg|max:2048',
-        // ]);
+        // // $this->validate($request, [
+        // //     'thumbnail' => 'file|image|mimes:jpeg,png,jpg|max:2048',
+        // // ]);
 
-        if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Berita::findOrFail($judul);
-            $item->update([
-                'judul' => $request->judul,
-                'thumbnail' => $finalName,
-                'tanggal' => $request->tanggal,
-                'headline' => $request->headline,
-                'kategori' => $request->kategori,
-                'isi_berita' => $request->isi_berita,
-            ]);
-        } else {
-            $item = Berita::findOrFail($judul);
-            $item->update([
-                'judul' => $request->judul,
-                'tanggal' => $request->tanggal,
-                'headline' => $request->headline,
-                'kategori' => $request->kategori,
-                'isi_berita' => $request->isi_berita,
-            ]);
-        }
+        // if ($request->hasFile('thumbnail')) {
+        //     $resource = $request->file('thumbnail');
+        //     $name = $resource->getClientOriginalName();
+        //     $finalName = date('His')  . $name;
+        //     $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
+        //     $item = Berita::findOrFail($judul);
+        //     $item->update([
+        //         'judul' => $request->judul,
+        //         'thumbnail' => $finalName,
+        //         'tanggal' => $request->tanggal,
+        //         'headline' => $request->headline,
+        //         'kategori' => $request->kategori,
+        //         'isi_berita' => $request->isi_berita,
+        //     ]);
+        // } else {
+        //     $item = Berita::findOrFail($judul);
+        //     $item->update([
+        //         'judul' => $request->judul,
+        //         'tanggal' => $request->tanggal,
+        //         'headline' => $request->headline,
+        //         'kategori' => $request->kategori,
+        //         'isi_berita' => $request->isi_berita,
+        //     ]);
+        // }
         
-        return redirect()->route('berita-staff.index');
+        // return redirect()->route('berita-koordinator.index');
     }
 
     /**
@@ -164,9 +164,9 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        $item = Berita::findOrFail($id);
-        $item->delete();
+        // $item = Berita::findOrFail($id);
+        // $item->delete();
 
-        return redirect()->route('berita-staff.index');
+        // return redirect()->route('berita-koordinator.index');
     }
 }

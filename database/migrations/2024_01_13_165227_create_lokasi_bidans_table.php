@@ -15,9 +15,9 @@ class CreateLokasiBidansTable extends Migration
     {
         Schema::create('lokasi_bidans', function (Blueprint $table) {
             $table->id();
-            $table->string('nrbidan');
-            $table->string('name');
-            $table->string('puskesmas');
+            $table->string('nrbidan')->unique();
+            $table->string('name')->unique();
+            $table->string('puskesmas')->unique();
             $table->timestamps();
         });
     }

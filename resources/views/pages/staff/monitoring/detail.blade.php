@@ -22,7 +22,11 @@
                 <tbody>
                     <tr>
                         <th>Nama</th>
-                        <td>{{Auth::user()->name}}</td>
+                        <td>{{ $item->name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nomor Registarsi</th>
+                        <td>{{ $item->nomerregistrasi }}</td>
                     </tr>
                     <tr>
                         <th>Nomor Dokumen</th>
@@ -91,7 +95,7 @@
                 </tbody>
             </table>
         </div>
-    <a href="{{url('/staff/monitoring-staff')}}" class="btn btn-primary">Kembali </a>
+    <a href="{{url('/staff/monitoring-koordinator')}}" class="btn btn-primary">Kembali </a>
 </section>
 
 

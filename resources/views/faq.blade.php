@@ -69,7 +69,7 @@
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         1.
-                                        Menghubungi staff untuk mendaftarkan diri Login ke AIBIC Menggunakan Username & Password
+                                        Menghubungi koordinator untuk mendaftarkan diri Login ke AIBIC Menggunakan Username & Password
                                         Segera login dengan username & password yang telah didaftarkan, setelah itu anda
                                         dapat langsung masuk ke aplikasi kami <br>
                                         2.Segera pilih menu "Visitasi" di sidebar kiri anda, lalu anda dapat melengkapi data diri anda

@@ -41,11 +41,11 @@ class LokasiPuskesmasController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+        // $data = $request->all();
 
-        Users::create($data);
+        // LokasiPuskesmas::create($data);
 
-        return redirect()->route('lokasipuskesmas.index');
+        // return redirect()->route('lokasipuskesmas.index');
     }
 
     /**
@@ -56,12 +56,11 @@ class LokasiPuskesmasController extends Controller
      */
     public function show($id)
     {
-        $item = Users::all()->findOrFail($id);
-        $item = Users::findOrFail($id);
+        $item = LokasiPuskesmas::findOrFail($id);
 
-        return view('pages.admin.lokasipuskesmas.detail', [
-            'item' => $item
-        ]);
+        // return view('pages.admin.lokasipuskesmas.detail', [
+        //     'item' => $item
+        // ]);
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
 use App\Models\Users;
 
 
@@ -45,7 +47,7 @@ class StaffController extends Controller
 
         Users::create($data);
 
-        return redirect()->route('data-staff.index');
+        return redirect()->route('data-koordinator.index');
     }
 
     /**
@@ -92,7 +94,7 @@ class StaffController extends Controller
         $item = Users::findOrFail($id);
         $item->update($data);
 
-        return redirect()->route('data-staff.index');
+        return redirect()->route('data-koordinator.index');
     }
 
     /**
@@ -105,6 +107,6 @@ class StaffController extends Controller
     {
         $item = Users::findOrFail($id);
         $item->delete();
-        return redirect()->route('data-staff.index');
+        return redirect()->route('data-koordinator.index');
     }
 }
