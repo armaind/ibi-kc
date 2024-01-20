@@ -42,9 +42,9 @@
                                         {{ $item->puskesmas }}
                                     </td>
                                     <td>
-                                        <a href="{{ route('lokasi-bidan.show', $item->id) }}" class="btn btn-info">
+                                        {{-- <a href="{{ route('lokasi-bidan.show', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <a href="{{ route('lokasi-bidan.edit', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>

@@ -27,7 +27,7 @@
                                 <th scope="col">KODE PUSKESMAS</th>
                                 <th scope="col">ALAMAT</th>
                                 <th scope="col">JENIS PUSKESMAS</th>
-                                <th scope="col">OPSI</th>
+                                {{-- <th scope="col">OPSI</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -45,7 +45,7 @@
                                 <td>
                                     {{ $item->jenispuskesmas }}
                                 </td>
-                                <td>
+                                {{-- <td>
                                     <a href="{{ route('lokasi-puskesmas.show', $item->id) }}" class="btn btn-primary">
                                         <i class="fa fa-eye"></i>
                                     </a>
@@ -60,7 +60,7 @@
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @empty
                             @endforelse

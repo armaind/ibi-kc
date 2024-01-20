@@ -26,7 +26,7 @@
                                     <th scope="col">Nama Bidan</th>
                                     <th scope="col">Nomer Registrasi Bidan</th>
                                     <th scope="col">Lokasi Puskesmas</th>
-                                    <th scope="col">OPSI</th>
+                                    {{-- <th scope="col">OPSI</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,11 +41,11 @@
                                     <td>
                                         {{ $item->puskesmas }}
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         <a href="{{ route('penempatan-bidann.show', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-eye"></i>
                                         </a>
-                                        {{-- <a href="{{ route('penempatan-bidann.edit', $item->id) }}" class="btn btn-info">
+                                        <a href="{{ route('penempatan-bidann.edit', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
                                         <form action="{{ route('penempatan-bidann.destroy', $item->id) }}" method="POST"
@@ -55,8 +55,8 @@
                                             <button class="btn btn-danger">
                                                 <i class="fa fa-trash"></i>
                                             </button>
-                                        </form> --}}
-                                    </td>
+                                        </form>
+                                    </td> --}}
                                 </tr>
                                 @empty
                                 @endforelse
